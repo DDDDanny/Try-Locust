@@ -1,3 +1,3 @@
 # Try-Loucst
 
-尝试使用Loucst🦗进行压测
+尝试使用Loucst🦗对ToolHub进行压测🥷
