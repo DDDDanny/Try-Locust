@@ -20,4 +20,5 @@ class ToolHubHome(TaskSet):
         # name参数可以控制Web端名称显示
         with self.client.get(url, name='Home GetMenu API') as response:
             # 这里可以做判断
+            # print(response.json())
             return response
