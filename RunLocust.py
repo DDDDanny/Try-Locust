@@ -6,16 +6,17 @@
 
 from locust import HttpUser
 
-from ToolHubHome.ToolHubHome import ToolHubHome
-from FakerData.GenerateData import GenerateData
+from Format.JsonStr import FormatJson
+from Calculate.RealPayment import RealPayment
 from SecretCode.EncryptData import EncryptData
 from SecretCode.DecryptData import DecryptData
-from Calculate.RealPayment import RealPayment
+from ToolHubHome.ToolHubHome import ToolHubHome
+from FakerData.GenerateData import GenerateData
 
 
 class RunLocust(HttpUser):
     # 注册压测任务
-    tasks = [ToolHubHome, GenerateData, EncryptData, DecryptData, RealPayment]
+    tasks = [ToolHubHome, GenerateData, EncryptData, DecryptData, RealPayment, FormatJson]
     # 最小思考时间
     min_wait = 3000
     # 最大思考时间
