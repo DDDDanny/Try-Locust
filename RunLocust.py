@@ -10,11 +10,12 @@ from ToolHubHome.ToolHubHome import ToolHubHome
 from FakerData.GenerateData import GenerateData
 from SecretCode.EncryptData import EncryptData
 from SecretCode.DecryptData import DecryptData
+from Calculate.RealPayment import RealPayment
 
 
 class RunLocust(HttpUser):
     # 注册压测任务
-    tasks = [ToolHubHome, GenerateData, EncryptData, DecryptData]
+    tasks = [ToolHubHome, GenerateData, EncryptData, DecryptData, RealPayment]
     # 最小思考时间
     min_wait = 3000
     # 最大思考时间
