@@ -8,11 +8,12 @@ from locust import HttpUser
 
 from ToolHubHome.ToolHubHome import ToolHubHome
 from FakerData.GenerateData import GenerateData
+from SecretCode.EncryptData import EncryptData
 
 
 class RunLocust(HttpUser):
     # 注册压测任务
-    tasks = [ToolHubHome, GenerateData]
+    tasks = [ToolHubHome, GenerateData, EncryptData]
     # 最小思考时间
     min_wait = 3000
     # 最大思考时间
